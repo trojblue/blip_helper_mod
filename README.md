@@ -1,5 +1,19 @@
 # BLIP helper
 
+
+
+VENV:
+
+```
+ D:\CSC3\blip_helper_mod\venv\Scripts\python.exe
+```
+
+
+
+
+
+
+
 A script for tagging picture with DeepDanbooru and BLIP
 
 This script is NOT intended to be publish to [PyPI](https://pypi.org). Clone this repository and run it directly,

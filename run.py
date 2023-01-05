@@ -80,10 +80,6 @@ if __name__ == "__main__":
         image = Image.open(image_path).convert("RGB")
         prompt = ""
         # I choose to use blip first.
-        if args.blip:
-            prompt += interrogator.generate_caption(image)
-        if args.blip and args.deepdanbooru:
-            prompt += ", "
         if args.deepdanbooru:
             prompt += deepbooru.get_deepbooru_tags_from_model(
                 model,
@@ -96,6 +92,11 @@ if __name__ == "__main__":
                 include_ranks=args.include_ranks,
                 log_results=args.log_deepbooru,
             )
+        if args.blip and args.deepdanbooru:
+            prompt += ", "
+        if args.blip:
+            prompt += interrogator.generate_caption(image)
+
         if (args.append != ""):
             prompt = post_process_prompt(prompt, args.append)
         txt_filename = image_path.with_suffix(".txt")

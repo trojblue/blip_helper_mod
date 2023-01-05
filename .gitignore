@@ -6,3 +6,4 @@ pretrained/deepbooru/*
 .DS_Store
 pretrained/WDTagger/*
 !pretrained/WDTagger/put_WDTagger_models_here.txt
+venv

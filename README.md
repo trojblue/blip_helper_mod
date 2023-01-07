@@ -9,7 +9,25 @@ VENV:
 ```
 
 
+on Jarvis Lab:
+```
+# install rust compiler
+curl https://sh.rustup.rs -sSf | sh
+source "$HOME/.cargo/env"
 
+# create conda environment
+conda create --name blip python=3.10 ipykernel
+conda activate blip
+
+# clone & install requirements
+cd ~/
+https://github.com/trojblue/blip_helper_mod
+git submodule update --init --recursive
+pip install -r requirements.txt
+pip install repo/DeepDanbooru
+
+python run.py --path ~/notebooks/diffusions/prototyping/img
+```
 
 
 
